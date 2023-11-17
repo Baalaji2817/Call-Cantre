@@ -1,0 +1,1809 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1211.1636                               -->
+<workbook original-version='18.1' source-build='2019.4.1 (20194.19.1211.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Call Center' inline='true' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Call Center' name='textscan.0nfiejp1x0mlzc1359wmr0vprhv3'>
+            <connection class='textscan' directory='D:/Downloads/PROJECT PRACTICE/SQL/CALL CENTRE' filename='Call Center.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0nfiejp1x0mlzc1359wmr0vprhv3' name='Call Center.csv' table='[Call Center#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='id' ordinal='0' />
+            <column datatype='string' name='customer_name' ordinal='1' />
+            <column datatype='string' name='sentiment' ordinal='2' />
+            <column datatype='integer' name='csat_score' ordinal='3' />
+            <column datatype='date' name='call_timestamp' ordinal='4' />
+            <column datatype='string' name='reason' ordinal='5' />
+            <column datatype='string' name='city' ordinal='6' />
+            <column datatype='string' name='state' ordinal='7' />
+            <column datatype='string' name='channel' ordinal='8' />
+            <column datatype='string' name='response_time' ordinal='9' />
+            <column datatype='integer' name='call duration in minutes' ordinal='10' />
+            <column datatype='string' name='call_center' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_name]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>customer_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sentiment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sentiment]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>sentiment</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>csat_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[csat_score]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>csat_score</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>call_timestamp</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[call_timestamp]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>call_timestamp</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reason</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[reason]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>reason</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>channel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[channel]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>channel</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>response_time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[response_time]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>response_time</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>call duration in minutes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[call duration in minutes]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>call duration in minutes</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>call_center</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[call_center]</local-name>
+            <parent-name>[Call Center.csv]</parent-name>
+            <remote-alias>call_center</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Avg' datatype='integer' name='[call duration in minutes]' role='measure' type='quantitative' />
+      <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+      <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+      <column aggregation='None' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column aggregation='Avg' datatype='integer' name='[csat_score]' role='measure' type='quantitative' visual-totals='Avg' />
+      <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+      <column datatype='string' name='[response_time]' role='dimension' type='nominal' />
+      <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+      <column aggregation='None' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[reason]' derivation='None' name='[none:reason:nk]' pivot='key' type='nominal' />
+      <column-instance column='[response_time]' derivation='None' name='[none:response_time:nk]' pivot='key' type='nominal' />
+      <group caption='Action (call_center)' hidden='true' name='[Action (call_center)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[call_center]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (channel)' hidden='true' name='[Action (channel)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[channel]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (reason)' hidden='true' name='[Action (reason)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[reason]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (response_time)' hidden='true' name='[Action (response_time)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[response_time]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (sentiment)' hidden='true' name='[Action (sentiment)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[sentiment]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='state, city'>
+          <field>[state]</field>
+          <field>[city]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.610028' measure-ordering='alphabetic' measure-percentage='0.389972' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:response_time:nk]' type='palette'>
+            <map to='#51b364'>
+              <bucket>&quot;Within SLA&quot;</bucket>
+            </map>
+            <map to='#e03531'>
+              <bucket>&quot;Above SLA&quot;</bucket>
+            </map>
+            <map to='#ffda66'>
+              <bucket>&quot;Below SLA&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:reason:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Billing Question&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Service Outage&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Payments&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='CALL CENTRE DASHBOARD' type='sheet' worksheet='KPI' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='CALL CENTRE DASHBOARD' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='CALL CENTRE DASHBOARD' type='sheet' worksheet='CALL CENTRE' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='CALL CENTRE DASHBOARD' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='CALL CENTRE DASHBOARD' type='sheet' worksheet='REASONS' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='CALL CENTRE DASHBOARD' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='CALL CENTRE DASHBOARD' type='sheet' worksheet='RESPONSE TIME' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='CALL CENTRE DASHBOARD' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='CALL CENTRE DASHBOARD' type='sheet' worksheet='CHANNEL' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='CALL CENTRE DASHBOARD' />
+      </command>
+    </action>
+    <action caption='Filter 6 (generated)' name='[Action6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='CALL CENTRE DASHBOARD' type='sheet' worksheet='SENTIMENT' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='CALL CENTRE DASHBOARD' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='CALL CENTRE'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Call Center' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m1sm9302ygc6g19f8avy1fgbywa'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+            <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column-instance column='[call_center]' derivation='None' name='[none:call_center:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]'>
+            <groupfilter function='level-members' level='[channel]' user:ui-action-filter='[Action5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]'>
+            <groupfilter function='level-members' level='[reason]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]'>
+            <groupfilter function='level-members' level='[sentiment]' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]'>
+            <groupfilter function='level-members' level='[none:call_center:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' scope='rows' value='false' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='Tableau Semibold' />
+            <format attr='font-size' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='9' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]' value='#55007f' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]</cols>
+      </table>
+      <simple-id uuid='{97E101D1-EBC1-4821-B725-601598FEC2A8}' />
+    </worksheet>
+    <worksheet name='CHANNEL'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>CHANNEL</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Call Center' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m1sm9302ygc6g19f8avy1fgbywa'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+            <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column-instance column='[channel]' derivation='None' name='[none:channel:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]'>
+            <groupfilter function='level-members' level='[call_center]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]'>
+            <groupfilter function='level-members' level='[reason]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]'>
+            <groupfilter function='level-members' level='[sentiment]' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='#304264' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:channel:nk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:channel:nk]' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:channel:nk]</rows>
+        <cols>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</cols>
+      </table>
+      <simple-id uuid='{99394A29-0F25-4EA7-89C6-A5DC980B74F7}' />
+    </worksheet>
+    <worksheet name='KPI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Call Center' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m1sm9302ygc6g19f8avy1fgbywa'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[call duration in minutes]' derivation='Avg' name='[avg:call duration in minutes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[csat_score]' derivation='Avg' name='[avg:csat_score:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+            <column aggregation='Avg' datatype='integer' name='[call duration in minutes]' role='measure' type='quantitative' />
+            <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+            <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='integer' name='[csat_score]' role='measure' type='quantitative' visual-totals='Avg' />
+            <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]'>
+            <groupfilter function='level-members' level='[call_center]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]'>
+            <groupfilter function='level-members' level='[channel]' user:ui-action-filter='[Action5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]'>
+            <groupfilter function='level-members' level='[reason]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]'>
+            <groupfilter function='level-members' level='[sentiment]' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[avg:csat_score:vtavg:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[avg:call duration in minutes:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='font-size' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Multiple Values]' value='14' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]' value='#ffffff' />
+            <format attr='height' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]' value='19' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]' value='#ff5500' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Semibold' />
+            <format attr='font-size' value='15' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{C3CF00E1-42FB-4AA5-841B-F220A680CA41}' />
+    </worksheet>
+    <worksheet name='REASONS'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>REASON FOR CALLING</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Call Center' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m1sm9302ygc6g19f8avy1fgbywa'>
+            <column caption='AVG(1)' datatype='real' name='[Calculation_951103962682376195]' role='measure' type='quantitative' user:unnamed='REASONS (2)'>
+              <calculation class='tableau' formula='AVG(1)' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+            <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column-instance column='[reason]' derivation='None' name='[none:reason:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Count' name='[pcto:cnt:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_951103962682376195]' derivation='User' name='[usr:Calculation_951103962682376195:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]'>
+            <groupfilter function='level-members' level='[call_center]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]'>
+            <groupfilter function='level-members' level='[channel]' user:ui-action-filter='[Action5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]'>
+            <groupfilter function='level-members' level='[sentiment]' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='display' class='0' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='1' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='vertical-align' value='center' />
+            <format attr='text-align' value='center' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[pcto:cnt:Number of Records:qk]' value='#1b1b1b' />
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[pcto:cnt:Number of Records:qk]' value='Tableau Semibold' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='bottom' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.5712155103683472' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]' />
+              <wedge-size column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[pcto:cnt:Number of Records:qk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='bottom' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='bottom' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.5712155103683472' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk] + [federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk])</cols>
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[pcto:cnt:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Billing Question&quot;</value>
+                <value>23462</value>
+                <value>1.0</value>
+                <value>0.71224310130232837</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-173' y='-41' />
+          </mark-label>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[pcto:cnt:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Payments&quot;</value>
+                <value>4749</value>
+                <value>1.0</value>
+                <value>0.14416684375094865</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-54' y='-11' />
+          </mark-label>
+          <mark-label id='2'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[usr:Calculation_951103962682376195:qk]</field>
+                  <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[pcto:cnt:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Service Outage&quot;</value>
+                <value>4730</value>
+                <value>1.0</value>
+                <value>0.14359005494672292</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{1BD801E8-2AF3-47AD-80D5-3A542D69CD97}' />
+    </worksheet>
+    <worksheet name='RESPONSE TIME'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Call Center' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m1sm9302ygc6g19f8avy1fgbywa'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+            <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column-instance column='[call_center]' derivation='None' name='[none:call_center:nk]' pivot='key' type='nominal' />
+            <column-instance column='[response_time]' derivation='None' name='[none:response_time:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[response_time]' role='dimension' type='nominal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]'>
+            <groupfilter function='level-members' level='[call_center]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]'>
+            <groupfilter function='level-members' level='[channel]' user:ui-action-filter='[Action5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]'>
+            <groupfilter function='level-members' level='[reason]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]'>
+            <groupfilter function='level-members' level='[sentiment]' user:ui-action-filter='[Action6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]'>
+            <groupfilter function='level-members' level='[none:call_center:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (sentiment)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='Tableau Semibold' />
+            <format attr='font-size' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='9' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]' value='#55007f' />
+            <format attr='font-family' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:response_time:nk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:response_time:nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' palette='sunrise_sunset_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:response_time:nk]</cols>
+      </table>
+      <simple-id uuid='{5DA4AAEE-CEAA-4E6A-A1CA-25A1E5DA3E28}' />
+    </worksheet>
+    <worksheet name='SENTIMENT'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Semibold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Call Center' name='federated.1m1sm9302ygc6g19f8avy1fgbywa' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m1sm9302ygc6g19f8avy1fgbywa'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[call_center]' role='dimension' type='nominal' />
+            <column datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[reason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]'>
+            <groupfilter function='level-members' level='[call_center]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]'>
+            <groupfilter function='level-members' level='[channel]' user:ui-action-filter='[Action5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]'>
+            <groupfilter function='level-members' level='[reason]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (call_center)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (channel)]</column>
+            <column>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[Action (reason)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='5' />
+            <format attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:sentiment:nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:sentiment:nk]' value='5' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+              <color column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:sentiment:nk]' />
+              <text column='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F0087C7C-D1C0-468E-9D85-DBE14178207C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='CALL CENTRE DASHBOARD'>
+      <style />
+      <size maxheight='850' maxwidth='1600' minheight='850' minwidth='1600' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='45597' id='3' type='empty' w='98874' x='563' y='53344'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='6353' id='22' type='empty' w='97438' x='1375' y='1059' />
+          <zone h='45932' id='7' param='vert' type='layout-flow' w='98874' x='563' y='7412' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#ffd7c2' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='4941' id='6' type='text' w='97188' x='1313' y='2353'>
+          <formatted-text>
+            <run fontcolor='#aa0000' fontname='Tableau Semibold' fontsize='22'>CALL CENTRE - DASHBOARD</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f5ead7' />
+          </zone-style>
+        </zone>
+        <zone h='14353' id='8' name='KPI' w='97625' x='1125' y='10235'>
+          <zone-style>
+            <format attr='border-color' value='#76b7b2' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#ddebf0' />
+          </zone-style>
+        </zone>
+        <zone h='32588' id='9' name='CALL CENTRE' w='27938' x='1250' y='28471'>
+          <zone-style>
+            <format attr='border-color' value='#b6992d' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#efebe8' />
+          </zone-style>
+        </zone>
+        <zone h='32824' id='11' name='REASONS' w='27500' x='34625' y='64706'>
+          <zone-style>
+            <format attr='border-color' value='#b07aa1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f3ebf3' />
+          </zone-style>
+        </zone>
+        <zone h='42471' id='13' name='SENTIMENT' w='31500' x='67000' y='28471'>
+          <zone-style>
+            <format attr='border-color' value='#edc948' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f5eddc' />
+          </zone-style>
+        </zone>
+        <zone h='32353' id='14' name='CHANNEL' w='27875' x='1188' y='65294'>
+          <zone-style>
+            <format attr='border-color' value='#59a14f' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f5ead7' />
+          </zone-style>
+        </zone>
+        <zone h='32824' id='15' name='RESPONSE TIME' w='27625' x='34563' y='28235'>
+          <zone-style>
+            <format attr='border-color' value='#e15759' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f9e9e0' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98118' id='25' param='vert' type='layout-flow' w='99000' x='500' y='941'>
+                <zone forceUpdate='true' h='4941' id='6' type='text' w='97188' x='1313' y='2353'>
+                  <formatted-text>
+                    <run fontcolor='#aa0000' fontname='Tableau Semibold' fontsize='22'>CALL CENTRE - DASHBOARD</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5ead7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='120' h='14353' id='8' is-fixed='true' name='KPI' w='97625' x='1125' y='10235'>
+                  <zone-style>
+                    <format attr='border-color' value='#76b7b2' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ddebf0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='277' h='32824' id='15' is-fixed='true' name='RESPONSE TIME' w='27625' x='34563' y='28235'>
+                  <zone-style>
+                    <format attr='border-color' value='#e15759' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f9e9e0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='275' h='32588' id='9' is-fixed='true' name='CALL CENTRE' w='27938' x='1250' y='28471'>
+                  <zone-style>
+                    <format attr='border-color' value='#b6992d' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42471' id='13' is-fixed='true' name='SENTIMENT' w='31500' x='67000' y='28471'>
+                  <zone-style>
+                    <format attr='border-color' value='#edc948' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5eddc' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='277' h='32824' id='11' is-fixed='true' name='REASONS' w='27500' x='34625' y='64706'>
+                  <zone-style>
+                    <format attr='border-color' value='#b07aa1' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f3ebf3' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='273' h='32353' id='14' is-fixed='true' name='CHANNEL' w='27875' x='1188' y='65294'>
+                  <zone-style>
+                    <format attr='border-color' value='#59a14f' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5ead7' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5BA69BE6-2B44-4FBD-BC25-F20D08E56DDB}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='CALL CENTRE DASHBOARD'>
+      <viewpoints>
+        <viewpoint name='CALL CENTRE'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='CHANNEL'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='REASONS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='RESPONSE TIME'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='SENTIMENT' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{827C8AF0-A5DA-4E89-AFA0-A8AC41846F96}' />
+    </window>
+    <window class='worksheet' hidden='true' name='CALL CENTRE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]</field>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:id:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D2174337-0FFF-40DE-BA43-9D6E082A04E1}' />
+    </window>
+    <window class='worksheet' hidden='true' name='CHANNEL'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:channel:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C24C82E7-0139-47B2-8B33-8193A50F9D5F}' />
+    </window>
+    <window class='worksheet' hidden='true' name='KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[:Measure Names]</field>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{05204A90-C6E0-49FD-B00D-C8893D12D903}' />
+    </window>
+    <window class='worksheet' hidden='true' name='REASONS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:reason:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1339EACD-E6D2-4F4D-A880-85B76AFF6D0B}' />
+    </window>
+    <window class='worksheet' hidden='true' name='RESPONSE TIME'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:call_center:nk]</field>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:id:nk]</field>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[none:response_time:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{08709DFC-B4C0-4653-BB02-FF1FD738EAC0}' />
+    </window>
+    <window class='worksheet' hidden='true' name='SENTIMENT'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m1sm9302ygc6g19f8avy1fgbywa].[sum:Number of Records:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8E48CBA3-F24C-4F86-8B7C-3CB8605EE69E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='CALL CENTRE DASHBOARD' width='192'>
+      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
+      B8h2xms34jR9AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
